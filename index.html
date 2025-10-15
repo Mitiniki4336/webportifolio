@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Nerbeth Maira - Web Developer" />
+  <meta name="keywords" content="Portfolio, Web Developer, HTML, CSS, JavaScript" />
+  <meta name="author" content="Nerbeth Maira" />
+  <title>Nerbeth Maira | Home</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      color: #ff4b2b;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ff4b2b;
+    }
+
+    .btn-theme {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    main {
+      flex: 1;
+      width: 100%;
+      padding: 3rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 3rem;
+      max-width: 700px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+      margin-bottom: 3rem;
+    }
+
+    .glass-card h1 {
+      font-size: 2.5rem;
+      background: linear-gradient(to right, #ff416c, #ff4b2b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+    }
+
+    .glass-card p {
+      color: #dddddd;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+    body.dark-mode {
+  background: #f0f0f0;
+  color: #222;
+}
+
+body.dark-mode header {
+  background: rgba(0, 0, 0, 0.05);
+  color: #222;
+}
+
+body.dark-mode nav ul li a {
+  color: #222;
+}
+
+body.dark-mode nav ul li a:hover {
+  color: #ff4b2b;
+}
+
+body.dark-mode .glass-card {
+  background: rgba(255, 255, 255, 0.9);
+  color: #222;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .glass-card h1,
+body.dark-mode .glass-card h2 {
+  background: none;
+  -webkit-text-fill-color: initial;
+  color: #ff4b2b;
+}
+
+body.dark-mode .btn.primary {
+  background: #ff4b2b;
+  color: #fff;
+}
+
+body.dark-mode .btn.secondary {
+  border: 2px solid #ff4b2b;
+  color: #ff4b2b;
+}
+
+body.dark-mode .btn.secondary:hover {
+  background: #ff4b2b;
+  color: #fff;
+}
+
+body.dark-mode footer {
+  background: rgba(0, 0, 0, 0.05);
+  color: #222;
+}
+
+body.dark-mode .card {
+  background: rgba(0, 0, 0, 0.05);
+  color: #222;
+}
+
+body.dark-mode .card:hover {
+  background: #ff4b2b;
+  color: #fff;
+}
+
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.8rem 1.6rem;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn.primary {
+      background: #ff4b2b;
+      color: #fff;
+      box-shadow: 0 0 15px #ff4b2b88;
+    }
+
+    .btn.primary:hover {
+      background: #ff416c;
+      box-shadow: 0 0 25px #ff4b2baa;
+    }
+
+    .btn.secondary {
+      border: 2px solid #ff4b2b;
+      color: #ff4b2b;
+    }
+
+    .btn.secondary:hover {
+      background: #ff4b2b;
+      color: #fff;
+      box-shadow: 0 0 20px #ff4b2baa;
+    }
+
+    /* Updated video section styles */
+    .video-section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      width: 100%;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+      border-radius: 15px;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+    }
+
+    .quick-links {
+      max-width: 700px;
+      margin: 2rem auto;
+    }
+
+    .link-cards {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      padding: 1rem 1.5rem;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.07);
+      color: #fff;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .card:hover {
+      background: #ff4b2b;
+      color: #fff;
+    }
+
+    footer {
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      width: 100%;
+      text-align: center;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    @media (max-width: 767px) {
+      /* For smaller screens, video section padding can be less */
+      .video-section {
+        padding: 0 0.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="logo">Nerbeth Maira</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="survey.html">Survey</a></li>
+      </ul>
+    </nav>
+    <button id="toggle-theme" class="btn-theme" aria-label="Toggle dark/light mode"><i class="fa-solid fa-moon"></i></button>
+  </header>
+
+  <main>
+    <section class="glass-card" data-aos="fade-up">
+      <h1>🚀 Let’s Build Something Legendary</h1>
+      <p>I’m Nerbeth, a web sorcerer mixing elegant code and killer UI for brands that dare to be different.</p>
+      <div class="btn-group">
+        <a href="#portfolio" class="btn primary">View Portfolio</a>
+        <a href="#contact" class="btn secondary">Let’s Talk</a>
+      </div>
+    </section>
+    <section id="portfolio" class="glass-card" data-aos="fade-up">
+  <h2>My Portfolio</h2>
+  <p>Coming soon: a showcase of my best projects.</p>
+</section>
+
+<section id="contact" class="glass-card" data-aos="fade-up">
+  <h2>Contact Me</h2>
+  <p>You can reach me at <a href="mailto:nerbethmaira@gmail.com">nerbethmaira@gmail.com</a>.</p>
+</section>
+
+
+    <section class="video-section" aria-labelledby="featured-video">
+      <h3 id="featured-video">🎥 Featured Video</h3>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/GxmfcnU3feo?start=388" title="Featured video" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <p><a href="https://youtu.be/GxmfcnU3feo?t=388" target="_blank">Watch on YouTube</a></p>
+    </section>
+
+    <section class="quick-links">
+      <h3>🚀 Quick Links</h3>
+      <ul class="link-cards">
+        <li><a href="mailto:nerbethmaira@gmail.com" class="card">📧 Email Me</a></li>
+        <li><a href="#" class="card">🔝 Back to Top</a></li>
+        <li><a href="https://github.com/Mitiniki4336" class="card" target="_blank">💻 GitHub Profile</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Nerbeth Maira. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleBtn = document.getElementById("toggle-theme");
+      toggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        const icon = toggleBtn.querySelector("i");
+        icon.classList.toggle("fa-sun");
+        icon.classList.toggle("fa-moon");
+      });
+    });
+  </script>
+</body>
+
+</html>
+

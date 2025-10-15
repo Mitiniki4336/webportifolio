@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Stylish About Me page for Nerbeth Maira" />
+  <meta name="author" content="Nerbeth Maira" />
+  <title>About Me | Nerbeth Maira</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --dark-bg: #0d0f1a;
+      --accent: #ff2e88;
+      --light-bg: #1e2230;
+      --text-light: #ffffffcc;
+      --text-strong: #ffffff;
+      --font-title: 'Playfair Display', serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--dark-bg);
+      color: var(--text-light);
+      display: flex;
+      min-height: 100vh;
+    }
+
+    aside {
+      background: var(--light-bg);
+      width: 240px;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 2px 0 15px rgba(0, 0, 0, 0.3);
+      position: sticky;
+      top: 0;
+    }
+
+    aside h1 {
+      font-family: var(--font-title);
+      color: var(--accent);
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+
+    nav ul {
+      list-style: none;
+      width: 100%;
+    }
+
+    nav ul li {
+      margin: 1rem 0;
+    }
+
+    nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.6rem 1rem;
+      display: block;
+      border-left: 4px solid transparent;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      border-left: 4px solid var(--accent);
+      background: rgba(255, 46, 136, 0.08);
+      color: var(--text-strong);
+    }
+
+    main {
+      flex: 1;
+      padding: 2.5rem;
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .card {
+      background: var(--light-bg);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .profile-img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 20px rgba(255, 46, 136, 0.4);
+    }
+
+    h2 {
+      font-family: var(--font-title);
+      color: var(--accent);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    ul, ol {
+      padding-left: 1.2rem;
+    }
+
+    ul li, ol li {
+      margin-bottom: 0.5rem;
+    }
+
+    strong {
+      color: var(--accent);
+    }
+
+    footer {
+      grid-column: 1 / -1;
+      text-align: center;
+      margin-top: 3rem;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      main {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+      }
+
+      aside {
+        position: relative;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+      }
+
+      aside h1 {
+        font-size: 1.5rem;
+      }
+
+      nav ul {
+        display: flex;
+        gap: 1rem;
+      }
+
+      nav ul li {
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <aside>
+    <h1>Nerbeth</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="survey.html">Survey</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+    <section class="card">
+      <img src="/home/mitniki/Documents/Web portfolio/images/Screenshot From 2025-05-16 03-36-00.png" alt="Nerbeth Profile" class="profile-img" />
+      <h2>About Me</h2>
+      <p>Hello! I’m Nerbeth Maira — a web developer passionate about crafting stylish, high-performance websites. I blend creativity with clean code to create immersive user experiences.</p>
+      <p>I love learning and experimenting with new technologies. Whether front-end or back-end, I'm always exploring ways to deliver faster, smarter, and bolder web solutions.</p>
+    </section>
+
+    <section class="card">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Front-end:</strong> HTML5, CSS3, JavaScript, Responsive Design</li>
+        <li><strong>ffunny course:</strong> Ethical Hacking,Penetration Testind and VUlnerability assessment</li>
+        <li><strong>Version Control:</strong> Git &amp; GitHub</li>
+      </ul>
+      <h2>🛤️ Learning Journey</h2>
+      <ol>
+        <li>Started with HTML & CSS basics</li>
+        <li>Dived into dynamic JavaScript</li>
+        <li>Built beautiful, responsive layouts</li>
+        <li>Learned backend development</li>
+        <li>Launched this elegant portfolio</li>
+      </ol>
+    </section>
+
+    <footer>&copy; 2025 Nerbeth Maira. Crafted with passion and precision.</footer>
+  </main>
+</body>
+</html>
+
